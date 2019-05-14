@@ -6,3 +6,5 @@ A Note-taking application using React and Bootstrap
 ### `npm install`
 ### `npm start`
 
+## Live Preview
+### https://codepen.io/hussamhassan/pen/LoxGMR
