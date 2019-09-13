@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import './App.css';
-import Table from './components/Table';
-import Form from './components/Form';
+import React, { Component } from "react";
+import "./App.css";
+import Table from "./components/Table";
+import Form from "./components/Form";
 
 class App extends Component {
   constructor(props) {
@@ -10,23 +10,23 @@ class App extends Component {
   }
 
   removeNote = index => {
-    const {notes} = this.state
+    const { notes } = this.state;
 
     this.setState({
       notes: notes.filter((note, i) => {
-        return i !== index
-      }),
-    })
-  }
+        return i !== index;
+      })
+    });
+  };
 
   submitHandler = note => {
-    this.setState({ notes: [...this.state.notes, note] })
-  }
+    this.setState({ notes: [...this.state.notes, note] });
+  };
 
   render() {
-    const { notes } = this.state
+    const { notes } = this.state;
     return (
-      <div>
+      <div className="fullscreen">
         <Form submitHandler={this.submitHandler} />
         <Table notesData={notes} removeNote={this.removeNote} />
       </div>
